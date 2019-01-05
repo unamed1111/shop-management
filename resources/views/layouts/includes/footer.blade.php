@@ -1,0 +1,1 @@
+<footer class="footer text-center clearfix">2018 © TuDouble Admin Themes template design</footer>
