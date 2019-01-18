@@ -105,6 +105,10 @@ class ComposerStaticInit2680333113d4f837936cdb2fcd9dfadb
             'Lcobucci\\JWT\\' => 13,
             'Laravel\\Tinker\\' => 15,
         ),
+        'K' => 
+        array (
+            'Kalnoy\\Nestedset\\' => 17,
+        ),
         'J' => 
         array (
             'JakubOnderka\\PhpConsoleHighlighter\\' => 35,
@@ -304,6 +308,10 @@ class ComposerStaticInit2680333113d4f837936cdb2fcd9dfadb
         array (
             0 => __DIR__ . '/..' . '/laravel/tinker/src',
         ),
+        'Kalnoy\\Nestedset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kalnoy/nestedset/src',
+        ),
         'JakubOnderka\\PhpConsoleHighlighter\\' => 
         array (
             0 => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src',
@@ -429,7 +437,9 @@ class ComposerStaticInit2680333113d4f837936cdb2fcd9dfadb
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CustomerController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomerController.php',
+        'App\\Http\\Controllers\\CustomerGroupController' => __DIR__ . '/../..' . '/app/Http/Controllers/CustomerGroupController.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
+        'App\\Http\\Controllers\\ExampleController' => __DIR__ . '/../..' . '/app/Http/Controllers/ExampleController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\OrderController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderController.php',
         'App\\Http\\Controllers\\OrderProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrderProductController.php',
@@ -464,6 +474,19 @@ class ComposerStaticInit2680333113d4f837936cdb2fcd9dfadb
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Services\\BaseService' => __DIR__ . '/../..' . '/app/Services/BaseService.php',
+        'App\\Services\\CustomerGroupService' => __DIR__ . '/../..' . '/app/Services/CustomerGroupService.php',
+        'App\\Services\\CustomerService' => __DIR__ . '/../..' . '/app/Services/CustomerService.php',
+        'App\\Services\\OrderProductService' => __DIR__ . '/../..' . '/app/Services/OrderProductService.php',
+        'App\\Services\\OrderService' => __DIR__ . '/../..' . '/app/Services/OrderService.php',
+        'App\\Services\\ProducerService' => __DIR__ . '/../..' . '/app/Services/ProducerService.php',
+        'App\\Services\\ProductGroupService' => __DIR__ . '/../..' . '/app/Services/ProductGroupService.php',
+        'App\\Services\\ProductService' => __DIR__ . '/../..' . '/app/Services/ProductService.php',
+        'App\\Services\\PromotionCustomerService' => __DIR__ . '/../..' . '/app/Services/PromotionCustomerService.php',
+        'App\\Services\\PromotionProductGroupService' => __DIR__ . '/../..' . '/app/Services/PromotionProductGroupService.php',
+        'App\\Services\\PromotionService' => __DIR__ . '/../..' . '/app/Services/PromotionService.php',
+        'App\\Services\\PropertyService' => __DIR__ . '/../..' . '/app/Services/PropertyService.php',
+        'App\\Services\\SupplierService' => __DIR__ . '/../..' . '/app/Services/SupplierService.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
         'BeyondCode\\DumpServer\\DumpServerServiceProvider' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
@@ -1995,6 +2018,14 @@ class ComposerStaticInit2680333113d4f837936cdb2fcd9dfadb
         'JakubOnderka\\PhpConsoleColor\\InvalidStyleException' => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src/InvalidStyleException.php',
         'JakubOnderka\\PhpConsoleHighlighter\\Highlighter' => __DIR__ . '/..' . '/jakub-onderka/php-console-highlighter/src/Highlighter.php',
         'JsonSerializable' => __DIR__ . '/..' . '/nesbot/carbon/src/JsonSerializable.php',
+        'Kalnoy\\Nestedset\\AncestorsRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/AncestorsRelation.php',
+        'Kalnoy\\Nestedset\\BaseRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/BaseRelation.php',
+        'Kalnoy\\Nestedset\\Collection' => __DIR__ . '/..' . '/kalnoy/nestedset/src/Collection.php',
+        'Kalnoy\\Nestedset\\DescendantsRelation' => __DIR__ . '/..' . '/kalnoy/nestedset/src/DescendantsRelation.php',
+        'Kalnoy\\Nestedset\\NestedSet' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NestedSet.php',
+        'Kalnoy\\Nestedset\\NestedSetServiceProvider' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NestedSetServiceProvider.php',
+        'Kalnoy\\Nestedset\\NodeTrait' => __DIR__ . '/..' . '/kalnoy/nestedset/src/NodeTrait.php',
+        'Kalnoy\\Nestedset\\QueryBuilder' => __DIR__ . '/..' . '/kalnoy/nestedset/src/QueryBuilder.php',
         'Laravel\\Tinker\\ClassAliasAutoloader' => __DIR__ . '/..' . '/laravel/tinker/src/ClassAliasAutoloader.php',
         'Laravel\\Tinker\\Console\\TinkerCommand' => __DIR__ . '/..' . '/laravel/tinker/src/Console/TinkerCommand.php',
         'Laravel\\Tinker\\TinkerCaster' => __DIR__ . '/..' . '/laravel/tinker/src/TinkerCaster.php',

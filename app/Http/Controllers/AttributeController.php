@@ -3,18 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Services\ProductGroupService;
-use App\Models\ProductGroup;
-use App\Http\Requests\StoreProductGroup;
+use App\Http\Controllers\Controller;
+use App\Models\Attribute;
+use App\Services\AttributeService;
+use App\Http\Requests\StoreAttribute;
+use Illuminate\Http\Response;
 
-class ProductGroupController extends Controller
+class AttributeController extends Controller
 {
     /**
      * @var service
      */
     private $service;
 
-    public function __construct(ProductGroupService $service)
+    public function __construct(AttributeService $service)
     {
         $this->service = $service;
         // $this->middleware('auth');
@@ -26,9 +28,9 @@ class ProductGroupController extends Controller
      */
     public function index()
     {
-        $ProductGroup = ProductGroup::get()->toTree();
-        return view('products.groups.productgroups',compact('ProductGroup'));
-    }
+        $attributes = Attribute::all()->toJson();
+        return view('products.attributes.attributes',compact('attributes'));
+    }           
 
     /**
      * Show the form for creating a new resource.
@@ -37,7 +39,7 @@ class ProductGroupController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -46,14 +48,13 @@ class ProductGroupController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProductGroup $request)
+    public function store(StoreAttribute $request)
     {
-        ProductGroup::create([
-            'name' => $request->name,
-            'parent_id' => $request->parent_id
+        Attribute::create([
+            'name' => $request->name
         ]);
-        $ProductGroup = ProductGroup::get()->toTree();
-        return view('products.groups.index',compact('ProductGroup'));
+        $attributes = Attribute::all();
+        return Response()->json($attributes);
     }
 
     /**
@@ -85,14 +86,13 @@ class ProductGroupController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreProductGroup $request, $id)
+    public function update(StoreAttribute $request, $id)
     {
-        $edit = ProductGroup::find($id);
+        $edit = Attribute::find($id);
         $edit->name = $request->name;
-        $edit->parent_id = $request->parent_id;
         $edit->save();
-        $ProductGroup = ProductGroup::get()->toTree();
-        return view('products.groups.index',compact('ProductGroup'));
+        $attributes = Attribute::all();
+        return Response()->json($attributes);
     }
 
     /**
@@ -103,9 +103,9 @@ class ProductGroupController extends Controller
      */
     public function destroy($id)
     {
-        $delete = ProductGroup::find($id);
+        $delete = Attribute::find($id);
         $delete->delete();
-        $ProductGroup = ProductGroup::get()->toTree();
-        return view('products.groups.index',compact('ProductGroup'));
+        $attributes = Attribute::all();
+        return Response()->json($attributes);
     }
 }

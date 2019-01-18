@@ -15,3 +15,5 @@ class ProductGroupService extends BaseService
 	}
 	
 }
+
+?>
